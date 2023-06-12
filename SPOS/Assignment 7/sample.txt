@@ -1,0 +1,29 @@
+Hii my name is vivek and i am from rahata.
+Nothing Special
+yyin=fopen("sample.txt","r");
+yyparse();
+return 0;
+
+
+%{
+    #include<stdio.h>
+%}
+%token COMPOUND WORD DOT
+%%
+// start:WORDLIST COMPOUND WORDLIST DOT{printf("Above statement is a compound statement");}
+start:WORDLIST DOT{printf("Above statement is a simple statement");}
+    // |WORDLIST DOT{printf("Above statement is simple statement");};
+    |WORDLIST:WORD WORDLIST;
+    |WORD;
+%%
+int main()
+{
+printf("\n Enter the statement:\n");
+yyparse();
+}
+int yyerror()
+{
+    return 0;
+}
+
+(""[aA][nN][dD]"")|(""[oO][rR]"")|(""[bB][uU][tT]"") {return COMPOUND; }

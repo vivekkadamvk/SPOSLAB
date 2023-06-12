@@ -1,0 +1,9 @@
+1	ADD1 &A,&B
+2	LDA	#1
+3	STA	#2
+4	MEND
+5	ADD2 &X,&Y,&Z
+6	LDA	#1
+7	STA	#2
+8	STA	#3
+9	MEND

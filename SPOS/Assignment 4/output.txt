@@ -1,0 +1,7 @@
+START
+A 1 10,
+L 2 20
+PRINT "Done"
+L 3 5,
+ST 4 8
+END
